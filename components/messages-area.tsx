@@ -21,21 +21,21 @@ export default function MessagesArea({ messages, isLoading }: MessagesAreaProps)
   const quoteAuthor = "Patrick King (The Soil King)"
 
   return (
-    <div className="flex-1 overflow-y-auto p-4 space-y-4 flex flex-col">
+    <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-4 flex flex-col min-h-0">
       {messages.length === 0 && !isLoading && (
-        <div className="flex-grow flex flex-col items-center justify-center text-center py-12">
+        <div className="flex-grow flex flex-col items-center justify-center text-center py-6 md:py-12 px-4">
           <div className="mb-6">
             <Image
               src="/images/probiotic-gardener-logo.png"
               alt="Probiotic Gardener"
-              width={64}
-              height={64}
-              className="mx-auto mb-4 rounded-full"
+              width={48}
+              height={48}
+              className="mx-auto mb-4 rounded-full md:w-16 md:h-16"
             />
-            <h3 className="text-xl font-semibold text-foreground mb-1">Welcome to Soil King AI</h3>
-            <p className="text-muted-foreground mb-6">Ask the Probiotic Gardener anything about soil and gardening!</p>
+            <h3 className="text-lg md:text-xl font-semibold text-foreground mb-1">Welcome to Soil King AI</h3>
+            <p className="text-sm md:text-base text-muted-foreground mb-6">Ask the Probiotic Gardener anything about soil and gardening!</p>
           </div>
-          <Card className="p-4 sm:p-6 bg-secondary text-secondary-foreground border-primary/20 max-w-lg sm:max-w-xl md:max-w-2xl mx-auto w-full">
+          <Card className="p-3 md:p-6 bg-secondary text-secondary-foreground border-primary/20 max-w-full md:max-w-2xl mx-auto w-full">
             <div className="flex items-start space-x-3">
               <Leaf className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
               <div>

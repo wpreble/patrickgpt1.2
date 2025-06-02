@@ -269,11 +269,12 @@ export default function Home() {
       {/* Left Sidebar */}
       <aside
         ref={leftSidebarRef}
-        style={{ width: isLeftSidebarOpen ? `${leftSidebarWidth}px` : "0px" }}
         className={cn(
           "bg-background border-r border-input flex flex-col transition-width duration-0 ease-in-out",
           !isLeftSidebarOpen && "opacity-0 pointer-events-none",
+          "hidden md:flex" // Hide on mobile, show on md and up
         )}
+        style={{ width: isLeftSidebarOpen ? `${leftSidebarWidth}px` : "0px" }}
       >
         {isLeftSidebarOpen && (
           <>
@@ -414,11 +415,12 @@ export default function Home() {
         </div>
       )}
 
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <div className="flex-1 flex flex-col max-w-3xl mx-auto w-full pt-0">
+      {/* Main Chat Area */}
+      <div className="flex-1 flex flex-col overflow-hidden min-w-0">
+        <div className="flex-1 flex flex-col w-full">
           <ChatHeader />
           <MessagesArea messages={messages} isLoading={isAssistantLoading} />
-          <div className="p-4 border-t-0 bg-transparent">
+          <div className="p-3 md:p-4 border-t bg-border/5">
             <form
               onSubmit={handleFormSubmit}
               className="bg-muted/50 dark:bg-gray-700 rounded-2xl shadow-lg flex items-center p-2 space-x-2"
@@ -495,13 +497,15 @@ export default function Home() {
         </div>
       )}
 
+      {/* Right Sidebar */}
       <aside
         ref={rightSidebarRef}
-        style={{ width: isRightSidebarOpen ? `${rightSidebarWidth}px` : "0px" }}
         className={cn(
           "bg-background border-l border-input flex flex-col transition-width duration-0 ease-in-out",
           !isRightSidebarOpen && "opacity-0 pointer-events-none",
+          "hidden lg:block" // Hide on mobile and tablet, show on lg and up
         )}
+        style={{ width: isRightSidebarOpen ? `${rightSidebarWidth}px` : "0px" }}
       >
         {isRightSidebarOpen && (
           <div className="flex flex-col h-full overflow-hidden">
