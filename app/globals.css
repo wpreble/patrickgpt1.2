@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 20 50% 98%; /* soilKingCream approx HSL */
+    --foreground: 20 10% 20%; /* Dark Brown/Black for text */
+
+    --card: 20 50% 98%;
+    --card-foreground: 20 10% 20%;
+
+    --popover: 20 50% 98%;
+    --popover-foreground: 20 10% 20%;
+
+    --primary: 88 70% 20%; /* soilKingDarkGreen approx HSL */
+    --primary-foreground: 90 30% 96%; /* soilKingCream / Light for text on dark green */
+
+    --secondary: 90 50% 80%; /* soilKingLightGreen approx HSL */
+    --secondary-foreground: 88 70% 15%; /* Darker Green for text on light green */
+
+    --muted: 90 30% 90%; /* Lighter soilKingLightGreen or Cream */
+    --muted-foreground: 30 25% 45%; /* soilKingBrown for muted text */
+
+    --accent: 30 45% 40%; /* soilKingBrown approx HSL */
+    --accent-foreground: 90 30% 96%; /* soilKingCream / Light for text on brown */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 90 30% 75%; /* Lighter green for borders */
+    --input: 90 30% 88%; /* Light green/cream for input backgrounds */
+    --ring: 88 70% 30%; /* soilKingDarkGreen for focus rings */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 30 15% 10%; /* Dark Brown/Gray for dark mode background */
+    --foreground: 90 30% 90%; /* Light Green/Cream for text */
+
+    --card: 30 15% 12%;
+    --card-foreground: 90 30% 90%;
+
+    --popover: 30 15% 10%;
+    --popover-foreground: 90 30% 90%;
+
+    --primary: 90 55% 65%; /* Brighter soilKingLightGreen for dark mode primary */
+    --primary-foreground: 88 70% 10%; /* Dark Green for text on light green */
+
+    --secondary: 88 40% 25%; /* Darker soilKingDarkGreen for dark mode secondary */
+    --secondary-foreground: 90 30% 85%;
+
+    --muted: 30 15% 18%; /* Darker brown/gray for muted */
+    --muted-foreground: 30 20% 60%; /* Lighter brown for muted text */
+
+    --accent: 30 40% 55%; /* Brighter soilKingBrown for dark mode accent */
+    --accent-foreground: 20 50% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 88 30% 30%; /* Darker green for borders in dark mode */
+    --input: 30 15% 20%; /* Darker brown/gray for input backgrounds */
+    --ring: 90 55% 55%; /* Lighter green for focus rings */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
