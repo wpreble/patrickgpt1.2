@@ -1,3 +1,6 @@
 {
-  "/page": "app/page.js"
+  "/notes/page": "app/notes/page.js",
+  "/resource-library/page": "app/resource-library/page.js",
+  "/page": "app/page.js",
+  "/toolbox/page": "app/toolbox/page.js"
 }
